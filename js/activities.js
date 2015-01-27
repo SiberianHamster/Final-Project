@@ -1,5 +1,5 @@
 var $submitClicked = $("#submit_btn");
-
+var $downloadClicked = $("#download_btn");
 
 var currentClient = [];
 
@@ -18,7 +18,7 @@ currentClient.push(client);
 
 
 $submitClicked.on("click", getInfo);
-
+$downloadClicked.on("click", downloadMe);
 
 function Client(name, email, region, season, duration, groupSize) {
   this.name = name;
@@ -28,4 +28,9 @@ function Client(name, email, region, season, duration, groupSize) {
   this.duration = duration;
   this.groupSize = groupSize;
 }
+
+function downloadMe(){
+  //need to then get the some information from the output of the logic function and change the dom
+}
+
 
