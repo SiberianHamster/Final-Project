@@ -14,8 +14,10 @@ var $groupSize = $('#inGroup').val();
 
 
 var client = new Client ($name, $email, $region, $season, $duration, $groupSize);
-
+console.log(client.array);
+client.classify();
 currentClient.push(client);
+console.log(currentClient[0].array);
 }
 
 
@@ -30,6 +32,22 @@ function Client(name, email, region, season, duration, groupSize) {
   this.season = season;
   this.duration = duration;
   this.groupSize = groupSize;
+  this.array = region +" "+ season +" "+ duration +" "+ groupSize;
+  this.classify = function(){
+    console.log("before loop, i'm here");
+    // for (i = 0; i<currentClient.length; i++){
+      console.log("first checkpoint");
+      switch(this.array){
+       case "Nepal Spring 2weeks 3to6":
+       console.log("Nepal");
+       break;
+       default:
+       console.log("broken");
+       break;
+
+      }
+    // }
+  }
 }
 
 
