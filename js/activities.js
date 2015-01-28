@@ -17,7 +17,26 @@ Client.prototype.getPrice = function() {
   var nepalBase = 3500
   var baliBase = 2700
   var thailandBase = 2250
-  return "<p class='price'>Your estimated price for this package is: $" + nepalBase + "</p>";
+  var customerPrice
+  console.log(this.region);
+  switch(this.region){
+    case "Nepal":
+      customerPrice = nepalBase;
+      break;
+
+    case "Bali":
+      customerPrice = baliBase;
+      break;
+
+    case "Thailand":
+      customerPrice = thailandBase;
+      break;
+
+    default:
+      alert("You broke the code somehow!")
+      break;
+  }
+   return "<p class='price'>Your estimated price for this package is: $" + customerPrice + "</p>";
   }
 
 function getInfo() {
@@ -35,7 +54,7 @@ function getInfo() {
   $downloadClicked.html("<button id='download_btn'><a href='../pdf/" + nameBuilder + "'download='MyTrip.pdf'>Click here to Download</button>");
   $downloadClicked.show();
 
-
+$(".price").html("");
  $(client.getPrice()).insertAfter($("#download_btn"));
 
 
