@@ -6,19 +6,13 @@ html {
 .subTitle {
   font-family: 'Handlee';
   font-weight: bolder;
+  font-size: 54px;
   color: black;
   margin: 0;
   padding-top: 30px;
   padding-left: 100px;
   padding-bottom: 20px;
-  z-index: 2;
   position: relative;
-}
-.title {
-  font-size: 54px;
-}
-.subTitle {
-  font-size: 54px;
 }
 .logo {
   float: left;
@@ -26,15 +20,18 @@ html {
 .navigate {
   text-align: center;
   font-family: 'Handlee';
-  color: #000000;
-  font-size: 18px;
+  font-size: 20px;
+  border-bottom: 4px solid black;
+  text-decoration: none;
 }
 a:link {
   color: #1A0000;
+  text-decoration: none;
 }
 a:visited {
   color: #1A0000;
   font-weight: bold;
+  text-decoration: none;
 }
 /*body {
   background-image: url(../imgs/Nepal/monastery.jpg);
@@ -53,21 +50,23 @@ a:visited {
 }
 .countryPhoto {
   margin-top: 60px;
-  padding-left: 320px;
+  padding: 0 100px 80px 200px;
 }
-.nepal {
-  padding: 0;
+.Nepal,
+.Bali,
+.Thailand {
   border: 4px solid black;
 }
-.bali {
-  padding: 0;
-  border: 4px solid black;
+.aboutCountry {
+  height: 180px;
+  width: 250px;
+  border: 2px solid black;
+  background-color:;
+  opacity: ;
+  font-family: ;
+  font-size: ;
+  color:;
+/*  display: none;
+*/}
 
-}
-.thailand {
-  padding: 0;
-  border: 4px solid black;
-}
-/*.aboutFooter {
-  padding-top: 700px;*/
-}
+
