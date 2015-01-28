@@ -46,11 +46,28 @@ a:visited {
 .slideShow {
   height: 465px;
   margin-bottom: 100px;
-  margin-top: 20px;
+  margin-top: 200px;
 }
 .photo {
   border: solid 8px black;
 }
-.aboutFooter {
-  padding-top: 700px;
+.countryPhoto {
+  margin-top: 60px;
+  padding-left: 320px;
+}
+.nepal {
+  padding: 0;
+  border: 4px solid black;
+}
+.bali {
+  padding: 0;
+  border: 4px solid black;
+
+}
+.thailand {
+  padding: 0;
+  border: 4px solid black;
+}
+/*.aboutFooter {
+  padding-top: 700px;*/
 }
