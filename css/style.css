@@ -8,20 +8,44 @@ html {
 .title,
 .subTitle {
   font-family: 'Handlee';
-  font-weight: bold;
+  font-weight: bolder;
+  color: black;
   margin: 0;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-bottom: 20px;
 }
-
-#nav {
+.title {
+  font-size: 54px;
+}
+.subTitle {
+  font-size: 54px;
+}
+.logo {
+  float: left;
+}
+.navigate {
   text-align: center;
   font-family: 'Handlee';
   font-weight: bold;
   color: #000000;
   font-size: 18px;
 }
-.slideShow>img {
-  position: absolute;
-  border: 8px solid black;
+a:link {
+  color: #1A0000;
+}
+a:visited {
+  color: #1A0000;
+}
+.slideShow {
+  height: 600px;
   margin-bottom: 100px;
+  margin-top: 20px;
+}
+.photo {
+  border: solid 8px black;
 }
 
+.clearfix: footer {
+  position: fixed;
+}
