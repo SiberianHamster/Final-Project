@@ -64,3 +64,21 @@ $(".price").html("");
 
 
 $submitClicked.on("click", getInfo);
+
+//on blur
+{
+    var infoRecovery = {};
+
+    infoRecovery["name"] = $name
+    infoRecovery["email"] = $email
+    infoRecovery["region"] = $region
+    infoRecovery["season"] = $season
+    infoRecovery["duration"] = $duration
+    infoRecovery["groupSize"] = $groupSize
+
+
+
+    var infoRecString = JSON.stringify(infoRecovery);
+
+    localStorage.setItem("clientInfo", infoRecString);
+  }
