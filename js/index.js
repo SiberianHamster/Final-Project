@@ -2,14 +2,12 @@
 
   setInterval(function() {
     $('.slideShow > img:first')
-      .fadeOut(2000);
-    },  4000);
+      .fadeOut(2000,function(){fadeMeBack()})},5000)
 
-  setInterval(function() {
+  var fadeMeBack = function() {
     $('.slideShow > img:first')
       .next()
       .fadeIn(2000)
       .end()
       .appendTo('.slideShow');
-    }, 6000);
-
+    }
