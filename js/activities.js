@@ -12,7 +12,7 @@ function getInfo() {
   var $duration = $('#inDuration').val();
   var $groupSize = $('#inGroup').val();
   var nameBuilder = $region + $season + $duration + $groupSize + ".pdf";
-  console.log(nameBuilder);
+
 
 
   $downloadClicked.html("<button id='download_btn'><a href='../pdf/" + nameBuilder + "'download='MyTrip.pdf'>Click here to Download</button>");
