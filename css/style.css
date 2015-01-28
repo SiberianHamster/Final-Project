@@ -1,9 +1,6 @@
 html {
   background-color: #680b0b;
-}
-.header {
-  text-align: center;
-/*  float: right;
+/*  background-image: url(../imgs/Nepal/monastery.jpg);
 */}
 .title,
 .subTitle {
@@ -14,6 +11,8 @@ html {
   padding-top: 30px;
   padding-left: 100px;
   padding-bottom: 20px;
+  z-index: 2;
+  position: relative;
 }
 .title {
   font-size: 54px;
@@ -37,6 +36,13 @@ a:link {
 a:visited {
   color: #1A0000;
 }
+/*body {
+  background-image: url(../imgs/Nepal/monastery.jpg);
+  opacity: .5;*/
+}
+.background.Photo {
+  background-image: url(../imgs/Nepal/monastery.jpg);
+}
 .slideShow {
   height: 600px;
   margin-bottom: 100px;
@@ -45,7 +51,6 @@ a:visited {
 .photo {
   border: solid 8px black;
 }
-
-.clearfix: footer {
-  position: fixed;
+.aboutFooter {
+  padding-top: 700px;
 }
