@@ -1,7 +1,10 @@
 html {
   background-color: #680b0b;
-/*  background-image: url(../imgs/Nepal/monastery.jpg);
-*/}
+}
+.background {
+  opacity: 1;
+  background-image: url(../imgs/Nepal/monastery.jpg);
+}
 .title,
 .subTitle {
   font-family: 'Handlee';
@@ -32,13 +35,6 @@ a:visited {
   color: #1A0000;
   font-weight: bold;
   text-decoration: none;
-}
-/*body {
-  background-image: url(../imgs/Nepal/monastery.jpg);
-  opacity: .5;*/
-}
-.background.Photo {
-  background-image: url(../imgs/Nepal/monastery.jpg);
 }
 .slideShow {
   height: 465px;
@@ -99,5 +95,8 @@ a:visited {
             transform: none;
   }
 }
-
-
+.tripPlanner {
+  margin-top: 40px;
+  position: relative;
+  border: 4px solid black;
+}
