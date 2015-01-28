@@ -16,6 +16,13 @@ var $groupSize = $('#inGroup').val();
 var client = new Client ($name, $email, $region, $season, $duration, $groupSize);
 
 currentClient.push(client);
+
+console.log(currentClient[0].name);
+console.log(currentClient[0].email);
+console.log(currentClient[0].region);
+console.log(currentClient[0].season);
+console.log(currentClient[0].duration);
+console.log(currentClient[0].groupSize);
 }
 
 
