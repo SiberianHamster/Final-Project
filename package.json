@@ -1,7 +1,7 @@
 {
   "name": "Final-Project",
   "version": "1.0.0",
-  "description": "awesome app for bootcamp final",
+  "description": "Fade in and out script borrowed from: http://css-tricks.com/examples/SimpleSlideshow/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,8 @@
     "type": "git",
     "url": "https://github.com/SiberianHamster/Final-Project.git"
   },
-  "author": "Sarah Brady",
+
+  "author": "Mark Ryman" "Sararh Brady" "Mark Lin"
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SiberianHamster/Final-Project/issues"
