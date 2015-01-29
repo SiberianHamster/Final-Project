@@ -1,9 +1,9 @@
 $(function() {
   var infoRecovery = localStorage.getItem("clientInfo");
-
+  console.log(infoRecovery);
   if (infoRecovery) {
       var infoRecString = JSON.parse(infoRecovery);
-      $("#inName").val(infoRecString["clientName"]);
+      $("#inName").val(infoRecString["inName"]);
       $("#inEmail").val(infoRecString["clientEmail"]);
       $("#inRegion").val(infoRecString["region"]);
       $("#inSeason").val(infoRecString["season"]);
@@ -81,20 +81,28 @@ $(function() {
   $(".userData").blur(function(){
     console.log("I did a blur");
       var infoRecovery = {};
+      $(".userData").each(function(){
+        var inputId = $(this).attr("id")
+        console.log(inputId);
+        infoRecovery[inputId] = $("#"+inputId).val();
+        console.log($("#"+inputId).val())
+      })
+  })
+      //
+
+      //
 
 
-      // infoRecovery['"' + $.each($(".userData"),function(){$(e.target).attr('id');}) + '"'] = $.each($(".userData"),function(){})
+      // infoRecovery["clientName"] = $('#inName').val();
+      // infoRecovery["clientEmail"] = $('#inEmail').val();
+      // infoRecovery["region"] = $('#inRegion').val();
+      // infoRecovery["season"] = $('#inSeason').val();
+      // infoRecovery["duration"] =  $('#inDuration').val();
+      // infoRecovery["groupSize"] = $('#inGroup').val();
 
-      infoRecovery["clientName"] = $('#inName').val();
-      infoRecovery["clientEmail"] = $('#inEmail').val();
-      infoRecovery["region"] = $('#inRegion').val();
-      infoRecovery["season"] = $('#inSeason').val();
-      infoRecovery["duration"] =  $('#inDuration').val();
-      infoRecovery["groupSize"] = $('#inGroup').val();
-
-      var infoRecString = JSON.stringify(infoRecovery);
+      // var infoRecString = JSON.stringify(infoRecovery);
       console.log(infoRecovery);
 
-      localStorage.setItem("clientInfo", infoRecString);
-  })
+      localStorage.setItem("clientInfo", infoRecovery);
+  // })
 });
