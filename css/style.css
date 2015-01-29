@@ -1,12 +1,17 @@
 html {
   background-color: #680b0b;
 }
-.background {
-  opacity: 1;
+header {
+  background-image: url(../imgs/Nepal/bamboo.jpg);
+}
+.tripBackground {
   background-image: url(../imgs/Nepal/monastery.jpg);
 }
-.title,
-.subTitle {
+.resourceBackground {
+  height: 950px;
+  background-image: url(../imgs/Nepal/nepal7.jpg);
+}
+.title {
   font-family: 'Handlee';
   font-weight: bolder;
   font-size: 54px;
@@ -20,26 +25,29 @@ html {
 .logo {
   float: left;
 }
-.navigate {
+.navigate,
+.nav {
   text-align: center;
   font-family: 'Handlee';
   font-size: 20px;
   border-bottom: 4px solid black;
   text-decoration: none;
+  background-color: black;
+  color: #ffffff;
 }
 a:link {
-  color: #1A0000;
-  text-decoration: none;
-}
-a:visited {
-  color: #1A0000;
-  font-weight: bold;
+  color: blue;
+  font-weight: bolder;
   text-decoration: none;
 }
 .slideShow {
   height: 465px;
   margin-bottom: 100px;
-  margin-top: 200px;
+  margin-top: 80px;
+}
+.resourceLinks<a {
+  color: blue;
+  text-decoration: none;
 }
 .photo {
   border: solid 8px black;
@@ -55,14 +63,11 @@ a:visited {
 }
 .aboutCountry {
   position: relative;
-  height: 180px;
-  width: 250px;
+  height: 200px;
+  width: 260px;
   border: 2px solid black;
-  background-color:;
-  opacity: ;
-  font-family: ;
-  font-size: ;
-  color:;
+  color: black;
+  font-size: 18px;
   -webkit-animation: fadeIn 10s 1;
   animation: fadeIn 10s 1;
 }
@@ -88,17 +93,36 @@ a:visited {
     -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0);
   }
-
   100% {
     opacity: 1;
     -webkit-transform: none;
             transform: none;
   }
 }
-.tripPlanner {
+.tripPlanning,
+.tripResources {
+  height: 520px;
+  width: 900px;
   margin-top: 40px;
   position: relative;
   border: 4px solid black;
-  background: #f0f8ff;
-  /*opacity: .5;*/
+  background: #F0F8FF;
+  text-indent: 60px;
 }
+#inName,
+#inEmail {
+  margin-left: 60px;
+  width:200px;
+}
+#submit_btn {
+  margin-left: 60px;
+  border: 2px solid black;
+  color: black;
+  background-color: #0c877f;
+}
+#download_btn {
+  margin-left: 180px;
+  margin-top: -40px;
+}
+
+
