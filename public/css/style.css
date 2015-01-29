@@ -2,7 +2,7 @@ html {
   background-color: #680b0b;
 }
 header {
-  background-image: url(../imgs/Nepal/bamboo.jpg);
+  background-image: url(../imgs/Nepal/bamboo copy.jpg);
 }
 .tripBackground {
   background-image: url(../imgs/Nepal/monastery.jpg);
@@ -35,7 +35,7 @@ header {
   background-color: black;
   color: #ffffff;
 }
-a:link {
+li ~ a {
   color: blue;
   font-weight: bolder;
   text-decoration: none;
