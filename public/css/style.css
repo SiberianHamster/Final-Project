@@ -2,7 +2,7 @@ html {
   background-color: #680b0b;
 }
 header {
-  background-image: url(../imgs/Nepal/bamboo copy.jpg);
+  background-image: url(../imgs/Nepal/bamboocopy.jpg);
 }
 .tripBackground {
   background-image: url(../imgs/Nepal/monastery.jpg);
@@ -14,11 +14,11 @@ header {
 .title {
   font-family: 'Handlee';
   font-weight: bolder;
-  font-size: 54px;
+  font-size: 60px;
   color: black;
-  margin: 0;
+  margin: 0px;
   padding-top: 30px;
-  padding-left: 100px;
+  padding-left: 280px;
   padding-bottom: 20px;
   position: relative;
 }
