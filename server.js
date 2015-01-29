@@ -4,7 +4,8 @@ var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(port, function() {
-  console.log('lookk here, sarted ' +  port);
-
+app.listen(port, function(){
+  console.log('look! I started my first server in port ' + port);
 });
+
+
