@@ -1,0 +1,22 @@
+{
+  "name": "Final-Project",
+  "version": "1.0.0",
+  "description": "Fade in and out script borrowed from: http://css-tricks.com/examples/SimpleSlideshow/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SiberianHamster/Final-Project.git"
+  },
+  "author": "Mark Ryman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiberianHamster/Final-Project/issues"
+  },
+  "homepage": "https://github.com/SiberianHamster/Final-Project",
+  "dependencies": {
+    "express": "^4.11.1"
+  }
+}
