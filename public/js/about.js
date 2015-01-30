@@ -1,4 +1,5 @@
 $(function() {
+  $("#toastie").hide();
   var codeEntered = false;
   var kArray = [38,38,40,40,37,39,37,39,66,65];
   $(document).keydown(function(event){
@@ -7,7 +8,7 @@ $(function() {
       $("#kcode").append("<div class='konamic'></div>");
       if(($("#kcode div").length) == 10){
         codeEntered = true;
-        $(".container").append('<img src="../imgs/toastie.jpg"/>');
+        $("#toastie").show();
       };
     }
     else{
