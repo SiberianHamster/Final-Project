@@ -2,13 +2,13 @@ $(function() {
   var infoRecovery = localStorage.getItem("clientInfo");
 
   if (infoRecovery) {
-      var infoRecString = JSON.parse(infoRecovery);
-      $("#inName").val(infoRecString["clientName"]);
-      $("#inEmail").val(infoRecString["clientEmail"]);
-      $("#inRegion").val(infoRecString["region"]);
-      $("#inSeason").val(infoRecString["season"]);
-      $("#inDuration").val(infoRecString["duration"]);
-      $("#inGroup").val(infoRecString["groupSize"]);
+    var infoRecString = JSON.parse(infoRecovery);
+    $("#inName").val(infoRecString["clientName"]);
+    $("#inEmail").val(infoRecString["clientEmail"]);
+    $("#inRegion").val(infoRecString["region"]);
+    $("#inSeason").val(infoRecString["season"]);
+    $("#inDuration").val(infoRecString["duration"]);
+    $("#inGroup").val(infoRecString["groupSize"]);
   }
 
   var $submitClicked = $("#submit_btn");
@@ -29,9 +29,8 @@ $(function() {
   Client.prototype.getPrice = function() {
     var nepalBase = 3500
     var baliBase = 2700
-    var thailandBase = 2250
+    var thailandBase = 2200
     var customerPrice
-    console.log(this.region);
     switch(this.region){
       case "Nepal":
         customerPrice = nepalBase;
@@ -49,8 +48,18 @@ $(function() {
         alert("You broke the code somehow!")
         break;
     }
-     return "<p class='price'>Your estimated price for this package is: $" + customerPrice + "</p>";
-    }
+    if (this.season == "Spring"){
+      customerPrice = customerPrice * 1.15
+    };
+    if (this.duration == "3weeks"){
+      customerPrice = customerPrice * 1.25
+    };
+    if (this.groupSize == "3to6"){
+      customerPrice = customerPrice * 1.25
+    };
+    customerPrice = (Math.floor(customerPrice / 100)) * 100;
+    return "<p class='price'>Your estimated price for this package is: $" + customerPrice + " per person.</p>";
+  }
 
   function getInfo() {
     var $name = $('#inName').val();
@@ -67,34 +76,26 @@ $(function() {
     $downloadClicked.html("<button id='download_btn'><a href='../pdf/" + nameBuilder + "'download='MyTrip.pdf'>Click here to Download</button>");
     $downloadClicked.show();
 
-  $(".price").html("");
-   $(client.getPrice()).insertAfter($("#download_btn"));
-
-
+    $(".price").html("");
+    $(client.getPrice()).insertAfter($("#download_btn"));
 
     currentClient.push(client);
   }
 
-
   $submitClicked.on("click", getInfo);
 
   $(".userData").blur(function(){
-    console.log("I did a blur");
-      var infoRecovery = {};
+    var infoRecovery = {};
 
+    infoRecovery["clientName"] = $('#inName').val();
+    infoRecovery["clientEmail"] = $('#inEmail').val();
+    infoRecovery["region"] = $('#inRegion').val();
+    infoRecovery["season"] = $('#inSeason').val();
+    infoRecovery["duration"] =  $('#inDuration').val();
+    infoRecovery["groupSize"] = $('#inGroup').val();
 
-      // infoRecovery['"' + $.each($(".userData"),function(){$(e.target).attr('id');}) + '"'] = $.each($(".userData"),function(){})
+    var infoRecString = JSON.stringify(infoRecovery);
 
-      infoRecovery["clientName"] = $('#inName').val();
-      infoRecovery["clientEmail"] = $('#inEmail').val();
-      infoRecovery["region"] = $('#inRegion').val();
-      infoRecovery["season"] = $('#inSeason').val();
-      infoRecovery["duration"] =  $('#inDuration').val();
-      infoRecovery["groupSize"] = $('#inGroup').val();
-
-      var infoRecString = JSON.stringify(infoRecovery);
-      console.log(infoRecovery);
-
-      localStorage.setItem("clientInfo", infoRecString);
+    localStorage.setItem("clientInfo", infoRecString);
   })
 });
