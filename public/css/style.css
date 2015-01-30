@@ -60,7 +60,6 @@ li ~ a {
   color: black;
 }
 .countryPhoto {
-/*  margin-top: 60px;*/
   padding: 20px 120px 40px 180px;
 }
 .Nepal,
@@ -77,22 +76,18 @@ li ~ a {
   -webkit-animation: fadeIn 10s 1;
   animation: fadeIn 10s 1;
 }
-
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-
 .fadeIn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }
-
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
